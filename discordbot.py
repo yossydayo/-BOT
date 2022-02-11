@@ -13,9 +13,27 @@ async def on_command_error(ctx, error):
 
 
 @bot.command()
+
 async def ping(ctx):
-    await ctx.send('pong')
+
+    """BotのPingを図るよ！"""
+
+    ping = round(bot.latency * 1000)
+
+    if ping > 150:
+
+        embed = discord.Embed(title="Botのping値", description=f"**``{ping}``** ms", color=discord.Color.red())
+
+        await ctx.reply(embed=embed)
+
+    else:
+
+        embed = discord.Embed(title="Botのping値", description=f"**``{ping}``** ms", color=discord.Color.green())
+
+        await ctx.reply(embed=embed) 
 
 
+
+       
 token = getenv('DISCORD_BOT_TOKEN')
 bot.run(token)
