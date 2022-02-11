@@ -11,28 +11,10 @@ async def on_command_error(ctx, error):
     error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
     await ctx.send(error_msg)
 
-
 @bot.command()
-
 async def ping(ctx):
-
-    """BotのPingを図るよ！"""
-
-    ping = round(bot.latency * 1000)
-
-    if ping > 150:
-
-        embed = discord.Embed(title="Botのping値", description=f"**``{ping}``** ms", color=discord.Color.red())
-
-        await ctx.reply(embed=embed)
-
-    else:
-
-        embed = discord.Embed(title="Botのping値", description=f"**``{ping}``** ms", color=discord.Color.green())
-
-        await ctx.reply(embed=embed) 
-
-
+    await ctx.send('pong')
+bot
 
        
 token = getenv('DISCORD_BOT_TOKEN')
