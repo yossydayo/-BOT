@@ -13,6 +13,14 @@ async def on_command_error(ctx, error):
 @bot.command()
 async def ping(ctx):
     await ctx.send('🏓pong!')
-       
+    
+    
+client = discord.Client(activity=discord.Game(name='my game'))
+
+# or, for watching:
+activity = discord.Activity(name='てすと！', type=discord.ActivityType.watching)
+client = discord.Client(activity=activity)
+
+    
 token = getenv('DISCORD_BOT_TOKEN')
 bot.run(token)
