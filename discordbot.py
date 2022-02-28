@@ -4,7 +4,6 @@ import traceback
 
 bot = commands.Bot(command_prefix='.')
 
-
 @bot.event
 async def on_command_error(ctx, error):
     orig_error = getattr(error, "original", error)
@@ -14,9 +13,7 @@ async def on_command_error(ctx, error):
 @bot.event
 @bot.command()
 async def ping(ctx):
-    await ctx.send('🏓pong!')
-bot
-
+    await ctx.send('🏓pong!')bot
        
 token = getenv('DISCORD_BOT_TOKEN')
 bot.run(token)
