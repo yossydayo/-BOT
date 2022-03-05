@@ -6,10 +6,10 @@ from http import client
 
 bot = commands.Bot(command_prefix=',')
 
-@client.event
+@bot.event
 async def on_ready():
-  print('Logged in as')
-  await client.change_presence(activity=discord.Game(name="online noww"))
+  print('ろぐいんなう')
+  await bot.change_presence(activity=discord.Game(name="おんらいんなう"))
 
 @bot.event
 async def on_command_error(ctx, error):
