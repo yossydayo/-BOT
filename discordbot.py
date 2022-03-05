@@ -9,7 +9,7 @@ bot = commands.Bot(command_prefix=',')
 @client.event
 async def on_ready():
   print('Logged in as')
-  await client.change_presence(activity=discord.Game(name="online now"))
+  await client.change_presence(activity=discord.Game(name="online noww"))
 
 @bot.event
 async def on_command_error(ctx, error):
