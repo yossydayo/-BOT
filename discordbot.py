@@ -1,14 +1,13 @@
+import discord
+from discord.ext import commands
+from os import getenv
+import traceback
 from http import client
 from pydoc import cli
 import discord
 from discord.ext import commands
 import random
 from discord import Permissions
-from colorama import Fore, Style
-import asyncio
-from discord.ext import commands
-from os import getenv
-import traceback
 
 bot = commands.Bot(command_prefix=',')
 
@@ -28,4 +27,4 @@ async def ping(ctx):
     await ctx.send('🏓pong!')
     
 token = getenv('DISCORD_BOT_TOKEN')
-bot.run(token) 
+bot.run(token)
