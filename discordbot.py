@@ -2,6 +2,7 @@ import discord
 from discord.ext import commands
 from os import getenv
 import traceback
+from http import client
 
 bot = commands.Bot(command_prefix=',')
 
@@ -18,7 +19,7 @@ async def on_command_error(ctx, error):
     
 @bot.command()
 async def ping(ctx):
-    await ctx.send('🏓pong!')
-    
+    await ctx.send(':ping_pong:pong!')
+
 token = getenv('DISCORD_BOT_TOKEN')
-bot.run(token) 
+bot.run('token') 
