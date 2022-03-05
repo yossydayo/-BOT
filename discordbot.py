@@ -4,7 +4,7 @@ import traceback
 
 bot = commands.Bot(command_prefix=',')
 
-await client.change_presence(activity=discord.Game(name="てすと"))
+await client.change_presence(activity=discord.Game(name="てeすと"))
 
 @bot.event
 async def on_command_error(ctx, error):
