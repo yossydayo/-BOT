@@ -2,7 +2,6 @@ import discord
 from discord.ext import commands
 from os import getenv
 import traceback
-from http import client
 
 bot = commands.Bot(command_prefix=',')
 
