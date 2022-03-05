@@ -8,7 +8,7 @@ bot = commands.Bot(command_prefix=',')
 @bot.event
 async def on_ready():
   print('ろぐいんなう')
-  await bot.change_presence(activity=discord.Game(name="おんらいんなう"))
+  await bot.change_presence(activity=discord.Game(name="現在コマンド反応しません。"))
 
 @bot.event
 async def on_command_error(ctx, error):
