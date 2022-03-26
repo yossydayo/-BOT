@@ -6,9 +6,7 @@ import traceback
 bot = commands.Bot(command_prefix=',')
 
 @bot.event
-async def on_ready():
-  print('ろぐいんなう')
-  await bot.change_presence(activity=discord.Game(name="現在コマンド反応しません。"))
+await bot.change_presence(activity=discord.Game(name=f"TEST{len(bot.guilds)}サーバー"), status=discord.Status.dnd)
 
 @bot.event
 async def on_command_error(ctx, error):
