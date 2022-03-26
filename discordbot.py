@@ -17,6 +17,11 @@ async def on_command_error(ctx, error):
 @bot.command()
 async def ping(ctx):
     await ctx.send(':ping_pong:pong!')
+    
+@bot.event
+async def on_message(message):
+  if '@everyone' in message.content:
+    await message.channel.send('えぶりわんするなよ！しね！') 
 
 token = getenv('DISCORD_BOT_TOKEN')
 bot.run(token)
