@@ -22,7 +22,7 @@ async def ping(ctx):
 
 @bot.command()
 async def @everyone(ctx):
-  await ctx.send('えぶりわんするなよしね！')
+  await ctx.send('えぶりわんするなよ！しね！')
 
 token = getenv('DISCORD_BOT_TOKEN')
 bot.run(token)
