@@ -6,7 +6,9 @@ import traceback
 bot = commands.Bot(command_prefix=',')
 
 @bot.event
-await bot.change_presence(activity=discord.Game(name="現在コマンド反応しません。"), status=discord.Status.dnd)
+async def on_ready():
+  await bot.change_presence(activity=discord.Game(name="現在コマンド反応しません。"), status=discord.Status.dnd) 
+
 
 @bot.event
 async def on_command_error(ctx, error):
